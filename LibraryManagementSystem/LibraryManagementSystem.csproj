@@ -81,6 +81,8 @@
     <Content Include="IssueBook.aspx" />
     <Content Include="BorrowerList.aspx" />
     <Content Include="ReturnBook.aspx" />
+    <Content Include="RequestBook.aspx" />
+    <Content Include="BookRequests.aspx" />
     <EntityDeploy Include="LibraryModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>LibraryModel.Designer.cs</LastGenOutput>
@@ -89,6 +91,7 @@
       <DependentUpon>LibraryModel.edmx</DependentUpon>
     </Content>
     <Content Include="Admin.Master" />
+    <Content Include="Student.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -173,6 +176,13 @@
       <DependentUpon>MainHomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student.cs" />
+    <Compile Include="Student.Master.cs">
+      <DependentUpon>Student.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student.Master.designer.cs">
+      <DependentUpon>Student.Master</DependentUpon>
+    </Compile>
     <Compile Include="StudentLogin.aspx.cs">
       <DependentUpon>StudentLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -271,6 +281,20 @@
     </Compile>
     <Compile Include="ReturnBook.aspx.designer.cs">
       <DependentUpon>ReturnBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestBook.aspx.cs">
+      <DependentUpon>RequestBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestBook.aspx.designer.cs">
+      <DependentUpon>RequestBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookRequests.aspx.cs">
+      <DependentUpon>BookRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookRequests.aspx.designer.cs">
+      <DependentUpon>BookRequests.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

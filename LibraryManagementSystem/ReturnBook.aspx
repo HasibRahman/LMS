@@ -37,7 +37,7 @@
                 <div>
                     <asp:Button CssClass="btn btn-default " ID="btnReturnBook" runat="server" Text="Return" OnClick="btnReturnBook_Click" />
                 </div>
-                </div>
+                </div>  
                 <asp:UpdateProgress ID="UpdateProgress1" AssociatedUpdatePanelID="UpdatePanel1" runat="server">
                     <ProgressTemplate>Processing...</ProgressTemplate>
                 </asp:UpdateProgress>

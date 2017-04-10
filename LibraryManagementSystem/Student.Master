@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="LibraryManagementSystem.Admin1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="LibraryManagementSystem.Student1" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@
         .navbar {
             margin-bottom: 0;
             border-radius: 0;
-            /*background-color:;*/
+            background-color:;
         }
 
         /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -68,54 +68,26 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class=""><a href="MainHomePage.aspx">Home</a></li>
-
+                    <li class="active"><a href="MainHomePage.aspx">Home</a></li>
                     <asp:ContentPlaceHolder ID="navbarPlaceHolder" runat="server">
                     </asp:ContentPlaceHolder>
-                    <li class="dropdown">
-
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="ManageStudent.aspx">Manage Students
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="AddStudent.aspx">Add Student</a></li>
-                            <li><a href="ManageStudent.aspx">Edit Student</a></li>
-                        </ul>
+                    <li>
+                        <a href="BorrowedBooks.aspx">Borrowed Books</a>
                     </li>
-                    <li><a class="dropdown-toggle" data-toggle="dropdown" href="ManageTeacher.aspx">Manage Teachers</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="AddTeacher.aspx">Add Teacher</a></li>
-                            <li><a href="ManageTeacher.aspx">Edit Teachers</a></li>
-                        </ul>
+                    <li>
+                        <a href="ManageAccount.aspx">Manage account</a>
                     </li>
-
-                    <li><a class="dropdown-toggle" data-toggle="dropdown" href="ManageBorrower.aspx">Manage Borrowers</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="IssueBook.aspx">Issue Book</a></li>
-                            <li><a href="BorrowerList.aspx">Borrower List</a></li>
-                            <li><a href="ReturnBook.aspx">Return Book</a></li>
-                        </ul>
+                    <li>
+                        <a href="RequestBook.aspx">Request Book</a>
                     </li>
-
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="ManageBooks.aspx">Manage Books</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="AddBook.aspx">Add Book</a></li>
-                            <li><a href="BookInfo.aspx">Book List</a></li>
-                            <li><a href="ManageBooks.aspx">Edit Book Information</a></li>
-                            <li><a href="BookRequests.aspx">Book Requests</a></li>
-                            <li><a href="IssueBook.aspx">Issue Book</a></li>
-
-                        </ul>
-
-                    </li>
-                    <li><a href="Reports.aspx">Reports</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-
-                    <li><a href="Logout.aspx"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
                 </ul>
                 <asp:ContentPlaceHolder ID="LogoutPlaceholder" runat="server">
                 </asp:ContentPlaceHolder>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="Logout.aspx"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+                    </li>
+                </ul>
 
             </div>
         </div>
@@ -141,4 +113,5 @@
 
 </body>
 </html>
+
 
