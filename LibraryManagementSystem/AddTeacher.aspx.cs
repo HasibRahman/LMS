@@ -53,12 +53,12 @@ namespace LibraryManagementSystem
                         Clear();
                     }
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
                     Response.Write("Some error occured");
                 }
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 Response.Write("Request Cannot be done");
             }

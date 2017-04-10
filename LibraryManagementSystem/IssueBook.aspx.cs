@@ -106,16 +106,27 @@ namespace LibraryManagementSystem
             lblFailed.Text = string.Empty;
             int id = Convert.ToInt32(txtStudentId.Text);
 
-            int count = library.tbl_issue.Count(x => x.StudentId == id);
-
-            if (count>=3)
+            bool studentValidity = library.tbl_student.Any(x => x.StudentId == id);
+            if (studentValidity)
             {
-                lblEligibility.Text = "You have already borrowed 3 books.";
-                E = false;
+                int count = library.tbl_issue.Count(x => x.StudentId == id);
+                if (count >= 3)
+                {
+                    lblEligibility.Text = "You have already borrowed 3 books.";
+                    E = false;
+                }
+                else
+                {
+                    lblEligibility.Text = "You are eligible to borrow this book";
+
+                }
             }
+            
+
+            
             else
             {
-                lblEligibility.Text = "You are eligible to borrow this book";
+                lblEligibility.Text = "Invalid student Id ";
                
             }
         }

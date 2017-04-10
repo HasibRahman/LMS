@@ -11,6 +11,7 @@ namespace LibraryManagementSystem
     public partial class WebForm8 : System.Web.UI.Page
     {
         LibraryDBContext library = new LibraryDBContext();
+        bool checkUsername;
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -34,6 +35,7 @@ namespace LibraryManagementSystem
             txtPassword.Text = string.Empty;
             lblSuccess.Text = string.Empty;
             lblFailed.Text = string.Empty;
+            lblCheckUserName.Text = "";
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
@@ -74,10 +76,36 @@ namespace LibraryManagementSystem
             student.Section = txtSection.Text;
             student.Semester = txtSemester.Text;
             student.YearOfAdmission = Convert.ToInt32(txtYearOfAdmission.Text);
+
+            if (!checkUsername)
+            {
+                library.AddTotbl_student(student);
+                library.SaveChanges();
+                CreateStudentLogin();
+               
+            }
+            else
+            {
+                lblFailed.Text = "This Username is not available";
+            }
             
-            library.AddTotbl_student(student);
-            library.SaveChanges();
-            CreateStudentLogin();
+        }
+
+        public void CheckUserName(object sender, EventArgs eventArgs)
+        {
+            
+        }
+
+        protected void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            lblCheckUserName.Text = "";
+            checkUsername = library.tbl_studentLogin.Any(x => x.UserName == txtUsername.Text);
+            if (checkUsername )
+            {
+                lblCheckUserName.CssClass = "alert-danger";
+                lblCheckUserName.Text = "This Username is not available";
+            }
+                       
         }
     }
 }

@@ -80,6 +80,7 @@
     <Content Include="StudentHome.aspx" />
     <Content Include="IssueBook.aspx" />
     <Content Include="BorrowerList.aspx" />
+    <Content Include="ReturnBook.aspx" />
     <EntityDeploy Include="LibraryModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>LibraryModel.Designer.cs</LastGenOutput>
@@ -263,6 +264,13 @@
     </Compile>
     <Compile Include="BorrowerList.aspx.designer.cs">
       <DependentUpon>BorrowerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnBook.aspx.cs">
+      <DependentUpon>ReturnBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReturnBook.aspx.designer.cs">
+      <DependentUpon>ReturnBook.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
