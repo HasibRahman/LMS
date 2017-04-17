@@ -80,6 +80,9 @@
                     <li>
                         <a href="RequestBook.aspx">Request Book</a>
                     </li>
+                    <li>
+                        <a href="RequestedBooks.aspx">Requested Book</a>
+                    </li>
                 </ul>
                 <asp:ContentPlaceHolder ID="LogoutPlaceholder" runat="server">
                 </asp:ContentPlaceHolder>

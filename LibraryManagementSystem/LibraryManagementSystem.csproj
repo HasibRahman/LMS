@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=16.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Daffodil\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -83,6 +87,8 @@
     <Content Include="ReturnBook.aspx" />
     <Content Include="RequestBook.aspx" />
     <Content Include="BookRequests.aspx" />
+    <Content Include="BorrowedBooks.aspx" />
+    <Content Include="ManageAccount.aspx" />
     <EntityDeploy Include="LibraryModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>LibraryModel.Designer.cs</LastGenOutput>
@@ -295,6 +301,20 @@
     </Compile>
     <Compile Include="BookRequests.aspx.designer.cs">
       <DependentUpon>BookRequests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowedBooks.aspx.cs">
+      <DependentUpon>BorrowedBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BorrowedBooks.aspx.designer.cs">
+      <DependentUpon>BorrowedBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccount.aspx.cs">
+      <DependentUpon>ManageAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageAccount.aspx.designer.cs">
+      <DependentUpon>ManageAccount.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
