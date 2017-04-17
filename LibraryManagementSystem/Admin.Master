@@ -108,7 +108,7 @@
                         </ul>
 
                     </li>
-                    <li><a href="Reports.aspx">Reports</a></li>
+                    <li><a href="Report.aspx">Reports</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 

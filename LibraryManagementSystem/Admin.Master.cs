@@ -11,14 +11,14 @@ namespace LibraryManagementSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Username"] != null)
-            {
-                Response.Write("Logged in ");
-            }
-            else
-            {
-                Response.Redirect("LibrarianLogin.aspx");
-            }
+            //if (Session["Username"] != null)
+            //{
+            //    Response.Write("Logged in ");
+            //}
+            //else
+            //{
+            //    Response.Redirect("LibrarianLogin.aspx");
+            //}
         }
     }
 }

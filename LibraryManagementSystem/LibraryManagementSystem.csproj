@@ -56,6 +56,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -90,6 +91,7 @@
     <Content Include="BorrowedBooks.aspx" />
     <Content Include="ManageAccount.aspx" />
     <Content Include="RequestedBooks.aspx" />
+    <Content Include="Report.aspx" />
     <EntityDeploy Include="LibraryModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>LibraryModel.Designer.cs</LastGenOutput>
@@ -99,6 +101,17 @@
     </Content>
     <Content Include="Admin.Master" />
     <Content Include="Student.Master" />
+    <Content Include="LMSDataSet.xsc">
+      <DependentUpon>LMSDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="LMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="LMSDataSet.xss">
+      <DependentUpon>LMSDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -166,6 +179,11 @@
     </Compile>
     <Compile Include="LMS.Master.designer.cs">
       <DependentUpon>LMS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LMSDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
@@ -324,6 +342,13 @@
     <Compile Include="RequestedBooks.aspx.designer.cs">
       <DependentUpon>RequestedBooks.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\ManageBooks\" />
@@ -334,6 +359,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report1.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
