@@ -12,11 +12,9 @@
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="MainSection" runat="server">
     <form runat="server" class="form-group">
-    <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" CellPadding="4" DataKeyNames="StudentId" DataSourceID="EntityDataSource1" ForeColor="#333333" GridLines="None">
-        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-        <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />
-        <EditRowStyle BackColor="#999999" />
-        <FieldHeaderStyle BackColor="#E9ECF1" Font-Bold="True" />
+        <div class="text-center">
+    <asp:DetailsView ID="DetailsView1" runat="server" Height="43px" Width="285px" AutoGenerateRows="False" CellPadding="4" DataKeyNames="StudentId" DataSourceID="EntityDataSource1" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px">
+        <EditRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
         <Fields>
             <asp:TemplateField  HeaderText="Student Id" SortExpression="StudentId">
                 <EditItemTemplate>
@@ -28,6 +26,7 @@
                 <ItemTemplate>
                     <asp:Label ID="Label1" runat="server" Text='<%# Bind("StudentId") %>'></asp:Label>
                 </ItemTemplate>
+                <ControlStyle CssClass="form-control" />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Student Name" SortExpression="StudentName">
                 <EditItemTemplate>
@@ -106,11 +105,13 @@
                 <ItemStyle CssClass="btn btn-default btn-sm" />
             </asp:TemplateField>
         </Fields>
-        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+        <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
+        <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
+        <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
+        <RowStyle BackColor="White" ForeColor="#003399" />
         </asp:DetailsView>
+        
+        </div>
         
         <asp:EntityDataSource ID="EntityDataSource1" runat="server" ConnectionString="name=LibraryDBContext" DefaultContainerName="LibraryDBContext" EnableFlattening="False" EnableUpdate="True" EntitySetName="tbl_student">
         </asp:EntityDataSource>

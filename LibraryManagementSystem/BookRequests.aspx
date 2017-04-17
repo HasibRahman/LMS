@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="BookRequests.aspx.cs" Inherits="LibraryManagementSystem.WebForm18" %>
+﻿<%@ Page  Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="BookRequests.aspx.cs" Inherits="LibraryManagementSystem.WebForm18" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitlePaceholder" runat="server">
     Book Requests
@@ -17,8 +17,8 @@
         <div class="form-group">
             <h2 style="text-align: center; color: midnightblue">Book Requests</h2>
         </div>
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-            <ContentTemplate>
+        <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>--%>
                 <div>
                     <div class="form-group">
                         <asp:Button CssClass="btn btn-warning" ID="btnPending" runat="server" Text="Pending" OnClick="btnPending_Click" />
@@ -29,32 +29,38 @@
                         &nbsp;
                         <asp:Button CssClass="btn btn-default" ID="btnShowAll" runat="server" Text="Show All Requests" OnClick="btnShowAll_Click" />
                     </div>
-                    <asp:UpdateProgress ID="UpdateProgress1" AssociatedUpdatePanelID="UpdatePanel1" runat="server">
+                    <%--<asp:UpdateProgress ID="UpdateProgress1" AssociatedUpdatePanelID="UpdatePanel1" runat="server">
                         <ProgressTemplate>Processing</ProgressTemplate>
-                    </asp:UpdateProgress>
+                    </asp:UpdateProgress>--%>
                     <br />
                     <div>
-                        <asp:GridView ID="GridViewBookRequests" runat="server">
+                        <asp:Label ID="lblmsg" CssClass="" runat="server" Text=""></asp:Label>   
+                        <asp:GridView ID="GridViewBookRequests" runat="server" OnRowCommand="GridViewBookRequests_RowCommand1" AllowSorting="True">
                             <Columns>
                                 <asp:CheckBoxField />
                                 <asp:TemplateField ShowHeader="False">
                                     <ItemTemplate>
-                                        <asp:Button ID="btnAccept" runat="server" CausesValidation="false" CommandName="" Text="Accept" OnClick="btnAccept_Click" />
+                                        <asp:Button ID="btnAccept" runat="server" CausesValidation="false" CommandName="Accept" CommandArgument="<%# ((GridViewRow)Container).RowIndex %>" Text="Accept" />
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField ShowHeader="False">
                                     <ItemTemplate>
-                                        <asp:Button ID="btnReject" runat="server" CausesValidation="false" CommandName="" Text="Reject" />
+                                        <asp:Button ID="btnReject" runat="server" CausesValidation="false" CommandName="Reject" CommandArgument="<%# ((GridViewRow)Container).RowIndex %>" Text="Reject" />
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
                     </div>
+                    <br />
+                    <br />
+                    <div>
+                        <asp:GridView ID="GridView1" runat="server" BorderColor="#CC66FF" EnableSortingAndPagingCallbacks="True"></asp:GridView>  
+                    </div>
 
                 </div>
 
-            </ContentTemplate>
-        </asp:UpdatePanel>
+        <%--    </ContentTemplate>
+        </asp:UpdatePanel>--%>
 
 
     </form>

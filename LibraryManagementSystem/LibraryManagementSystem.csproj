@@ -89,6 +89,7 @@
     <Content Include="BookRequests.aspx" />
     <Content Include="BorrowedBooks.aspx" />
     <Content Include="ManageAccount.aspx" />
+    <Content Include="RequestedBooks.aspx" />
     <EntityDeploy Include="LibraryModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>LibraryModel.Designer.cs</LastGenOutput>
@@ -315,6 +316,13 @@
     </Compile>
     <Compile Include="ManageAccount.aspx.designer.cs">
       <DependentUpon>ManageAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestedBooks.aspx.cs">
+      <DependentUpon>RequestedBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestedBooks.aspx.designer.cs">
+      <DependentUpon>RequestedBooks.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
