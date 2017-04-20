@@ -29,6 +29,7 @@
             </div>
             <div class="form-group">
                 <asp:TextBox CssClass="form-control" ID="txtTeacherId" runat="server" ToolTip="Enter University Teacher ID "></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="alert-danger" ID="RequiredFieldValidator1" runat="server" ErrorMessage="This Field is required" ControlToValidate="txtTeacherId"></asp:RequiredFieldValidator>
             </div>
 
             <div class="">
@@ -36,6 +37,8 @@
             </div>
             <div class="form-group">
                 <asp:TextBox CssClass="form-control" ID="txtTeacherName" runat="server" ToolTip="Enter Full Name"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="alert-danger" ID="RequiredFieldValidator2" runat="server" ErrorMessage="This Field is required" ControlToValidate="txtTeacherName"></asp:RequiredFieldValidator>
+                
             </div>
 
             <div class="">
@@ -43,6 +46,8 @@
             </div>
             <div class="form-group">
                 <asp:TextBox CssClass="form-control" ID="txtDesignation" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="alert-danger" ID="RequiredFieldValidator3" runat="server" ErrorMessage="This Field is required" ControlToValidate="txtDesignation"></asp:RequiredFieldValidator>
+            
             </div>
 
             <div class="">
@@ -50,6 +55,8 @@
             </div>
             <div class="form-group">
                 <asp:TextBox CssClass="form-control" ID="txtBranch" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="alert-danger" ID="RequiredFieldValidator4" runat="server" ErrorMessage="This Field is required" ControlToValidate="txtBranch"></asp:RequiredFieldValidator>
+            
             </div>
 
             <div class="">
@@ -57,6 +64,8 @@
             </div>
             <div class="form-group">
                 <asp:TextBox CssClass="form-control" ID="txtContact" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="alert-danger" ID="RequiredFieldValidator5" runat="server" ErrorMessage="This Field is required" ControlToValidate="txtContact"></asp:RequiredFieldValidator>
+
             </div>
             
             <div class="">
@@ -64,12 +73,16 @@
             </div>
             <div class="form-group">
                 <asp:TextBox CssClass="form-control" ID="txtUsername" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="alert-danger" ID="RequiredFieldValidator6" runat="server" ErrorMessage="This Field is required" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
+
             </div>
             <div class="">
                 <span>Password </span>
             </div>
             <div class="form-group">
                 <asp:TextBox CssClass="form-control" ID="txtPassword" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="alert-danger" ID="RequiredFieldValidator7" runat="server" ErrorMessage="This Field is required" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
+
             </div>
 
             <div class="">
@@ -77,6 +90,8 @@
             </div>
             <div class="form-group">
                 <asp:TextBox CssClass="form-control" ID="txtConfirmPassword" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="alert-danger" Display="Dynamic" ID="RequiredFieldValidator8" runat="server" ErrorMessage="This Field is required" ControlToValidate="txtConfirmPassword"></asp:RequiredFieldValidator>
+                <asp:CompareValidator CssClass="alert-danger" Display="Dynamic" ID="CompareValidator1" runat="server" ErrorMessage="CompareValidator" ControlToValidate="txtConfirmPassword"></asp:CompareValidator>
             </div>
 
             <div class="form-group">
